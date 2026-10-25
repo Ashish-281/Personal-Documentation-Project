@@ -1,0 +1,5 @@
+site/
+.venv/
+.vale/styles/Google/
+.vale/styles/write-good/
+__pycache__/

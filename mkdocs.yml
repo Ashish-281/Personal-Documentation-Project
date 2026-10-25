@@ -1,0 +1,57 @@
+site_name: Parcelly Docs
+site_description: Documentation for the Parcelly shipment tracking API (a fictional product for portfolio purposes)
+repo_url: https://github.com/YOUR-USERNAME/parcelly-docs
+edit_uri: edit/main/docs/
+strict: true
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - content.code.copy
+    - content.action.edit
+  palette:
+    - scheme: default
+      toggle: { icon: material/weather-night, name: Switch to dark mode }
+    - scheme: slate
+      toggle: { icon: material/weather-sunny, name: Switch to light mode }
+
+plugins:
+  - search
+  - swagger-ui-tag
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - toc: { permalink: true }
+  - pymdownx.highlight: { anchor_linenums: true }
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed: { alternate_style: true }
+
+nav:
+  - Home: index.md
+  - Get started:
+      - Quickstart: getting-started/quickstart.md
+      - Authentication: getting-started/authentication.md
+  - Tutorials:
+      - Track your first shipment: tutorials/track-first-shipment.md
+  - How-to guides:
+      - Create a webhook: how-to/create-webhook.md
+      - Handle rate limits: how-to/handle-rate-limits.md
+  - Concepts:
+      - Shipment lifecycle: concepts/shipment-lifecycle.md
+  - Reference:
+      - API reference: reference/api.md
+      - Errors: reference/errors.md
+  - Troubleshooting: troubleshooting.md
+  - Release notes: release-notes.md
+  - Contribute:
+      - Style guide: contributing/style-guide.md
+  - About this portfolio: about.md
